@@ -34,7 +34,7 @@ export const App = () => {
         <input name="school" type="text" placeholder="eneter your school education : " />
         <input name="date" type="" placeholder="eneter your burth date " />
         <input name="living" type="text" placeholder="eneter your place :" />
-        <input type="button" value="send"/>
+        <input type="submit" value="send"/>
       </form>
       </div>
     </div>
