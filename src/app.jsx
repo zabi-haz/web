@@ -29,11 +29,11 @@ export const App = () => {
           </h2>
         </div>
       <form ref={form} className="main_form" onSubmit={sendEmail}>
-        <input type="text" placeholder="enter your name :" />
-        <input type="text" placeholder="eneter your phone number : " />
-        <input type="text" placeholder="eneter your school education : " />
-        <input type="" placeholder="eneter your burth date " />
-        <input type="text" placeholder="eneter your place :" />
+        <input name="first_name" type="text" placeholder="enter your name :" />
+        <input name="phone_number" type="number"placeholder="eneter your phone number : " />
+        <input name="school" type="text" placeholder="eneter your school education : " />
+        <input name="date" type="" placeholder="eneter your burth date " />
+        <input name="living" type="text" placeholder="eneter your place :" />
         <input type="button" value="send"/>
       </form>
       </div>
