@@ -46,6 +46,8 @@
   margin-bottom:7px;
   padding-left: 10px;
   color: #fdfdfd;
+  display: flex;
+  flex-direction: row-reverse;
 }
 .main_form input:nth-child(6){
   background:#008a91;

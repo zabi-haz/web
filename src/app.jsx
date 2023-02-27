@@ -1,10 +1,14 @@
 import "./style.css"
 import face from "./secondfaceedit.png";
 import emailjs from '@emailjs/browser';
-import {useRef}from "react"
+import {useRef,useState}from "react"
 
 
 export const App = () => {
+
+  const [isOk , setIsOk] = useState(false);
+
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -13,6 +17,7 @@ export const App = () => {
     emailjs.sendForm('service_3f3805s', 'template_ipeue3o', form.current, 'ofUifwRblAs7N5Pyi')
       .then((result) => {
           console.log(result.text);
+          setIsOk(true)
           console.log("send ")
       }, (error) => {
           console.log(error.text);
@@ -29,11 +34,11 @@ export const App = () => {
           </h2>
         </div>
       <form ref={form} className="main_form" onSubmit={sendEmail}>
-        <input name="first_name" type="text" placeholder="enter your name :" />
-        <input name="phone_number" type="number"placeholder="eneter your phone number : " />
-        <input name="school" type="text" placeholder="eneter your school education : " />
-        <input name="date" type="" placeholder="eneter your burth date " />
-        <input name="living" type="text" placeholder="eneter your place :" />
+          <input name="first_name" type="text" placeholder="ادخل اسمك :" />
+        <input name="phone_number" type="number"placeholder="ادخل رقم الهاتف : " />
+        <input name="school" type="text" placeholder="تحصيلك الدراسي : " />
+        <input name="date" type="" placeholder="تاريخ الميلاد " />
+        <input name="living" type="text" placeholder="مكان سكنك :" />
         <input type="submit" value="send"/>
       </form>
       </div>
